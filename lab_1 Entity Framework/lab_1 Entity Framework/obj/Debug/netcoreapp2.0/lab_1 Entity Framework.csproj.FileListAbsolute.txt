@@ -1,0 +1,11 @@
+E:\Oksana\univer\2 semestr\IGI\lab_1 Entity Framework\lab_1 Entity Framework\bin\Debug\netcoreapp2.0\lab_1 Entity Framework.deps.json
+E:\Oksana\univer\2 semestr\IGI\lab_1 Entity Framework\lab_1 Entity Framework\bin\Debug\netcoreapp2.0\lab_1 Entity Framework.runtimeconfig.json
+E:\Oksana\univer\2 semestr\IGI\lab_1 Entity Framework\lab_1 Entity Framework\bin\Debug\netcoreapp2.0\lab_1 Entity Framework.runtimeconfig.dev.json
+E:\Oksana\univer\2 semestr\IGI\lab_1 Entity Framework\lab_1 Entity Framework\bin\Debug\netcoreapp2.0\lab_1 Entity Framework.dll
+E:\Oksana\univer\2 semestr\IGI\lab_1 Entity Framework\lab_1 Entity Framework\obj\Debug\netcoreapp2.0\lab_1 Entity Framework.csprojResolveAssemblyReference.cache
+E:\Oksana\univer\2 semestr\IGI\lab_1 Entity Framework\lab_1 Entity Framework\obj\Debug\netcoreapp2.0\lab_1 Entity Framework.csproj.CoreCompileInputs.cache
+E:\Oksana\univer\2 semestr\IGI\lab_1 Entity Framework\lab_1 Entity Framework\obj\Debug\netcoreapp2.0\lab_1 Entity Framework.AssemblyInfoInputs.cache
+E:\Oksana\univer\2 semestr\IGI\lab_1 Entity Framework\lab_1 Entity Framework\obj\Debug\netcoreapp2.0\lab_1 Entity Framework.AssemblyInfo.cs
+E:\Oksana\univer\2 semestr\IGI\lab_1 Entity Framework\lab_1 Entity Framework\bin\Debug\netcoreapp2.0\lab_1 Entity Framework.pdb
+E:\Oksana\univer\2 semestr\IGI\lab_1 Entity Framework\lab_1 Entity Framework\obj\Debug\netcoreapp2.0\lab_1 Entity Framework.dll
+E:\Oksana\univer\2 semestr\IGI\lab_1 Entity Framework\lab_1 Entity Framework\obj\Debug\netcoreapp2.0\lab_1 Entity Framework.pdb
