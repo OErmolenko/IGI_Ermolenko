@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewData["Title"] = "Aircrafts";
+}
+
+<h2>Aircrafts</h2>
+@using (Html.BeginForm("Aircrafts", "Home", FormMethod.Post))
+{
+    <p>
+        <label>Марка</label>
+        <br />
+        @Html.DropDownList("Mark", new SelectList(ViewBag.Mark), (string)ViewBag.SelectMark)
+    </p>
+    <p>
+        <label>Вместимость</label>
+        <br />
+        @Html.TextBox("Capasity", (string)ViewBag.Capasity)
+    </p>
+    <p>
+        <label>Грузоподъемность</label>
+        <br />
+        @Html.TextBox("Carrying", (string)ViewBag.Carrying)
+    </p>
+    <p>
+        <button>Поиск</button>
+    </p>
+    <br />
+    <table class="table">
+        <tr class="header">
+            <td>Марка</td>
+            <td>Вместимость</td>
+            <td>Грузоподъемность</td>
+        </tr>
+        @foreach (Aircraft item in ViewBag.listAircrafts)
+        {
+            <tr>
+                <td>@item.Mark</td>
+                <td>@item.Capasity</td>
+                <td>@item.Carrying.ToString("F2")</td>
+            </tr>
+        }
+    </table>
+}

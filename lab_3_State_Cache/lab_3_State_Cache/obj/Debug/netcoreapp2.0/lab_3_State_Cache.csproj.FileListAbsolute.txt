@@ -1,0 +1,11 @@
+C:\Users\Oksana\Desktop\lab_3_State_Cache\lab_3_State_Cache\bin\Debug\netcoreapp2.0\lab_3_State_Cache.deps.json
+C:\Users\Oksana\Desktop\lab_3_State_Cache\lab_3_State_Cache\bin\Debug\netcoreapp2.0\lab_3_State_Cache.runtimeconfig.json
+C:\Users\Oksana\Desktop\lab_3_State_Cache\lab_3_State_Cache\bin\Debug\netcoreapp2.0\lab_3_State_Cache.runtimeconfig.dev.json
+C:\Users\Oksana\Desktop\lab_3_State_Cache\lab_3_State_Cache\bin\Debug\netcoreapp2.0\lab_3_State_Cache.dll
+C:\Users\Oksana\Desktop\lab_3_State_Cache\lab_3_State_Cache\bin\Debug\netcoreapp2.0\lab_3_State_Cache.pdb
+C:\Users\Oksana\Desktop\lab_3_State_Cache\lab_3_State_Cache\obj\Debug\netcoreapp2.0\lab_3_State_Cache.csprojResolveAssemblyReference.cache
+C:\Users\Oksana\Desktop\lab_3_State_Cache\lab_3_State_Cache\obj\Debug\netcoreapp2.0\lab_3_State_Cache.csproj.CoreCompileInputs.cache
+C:\Users\Oksana\Desktop\lab_3_State_Cache\lab_3_State_Cache\obj\Debug\netcoreapp2.0\lab_3_State_Cache.AssemblyInfoInputs.cache
+C:\Users\Oksana\Desktop\lab_3_State_Cache\lab_3_State_Cache\obj\Debug\netcoreapp2.0\lab_3_State_Cache.AssemblyInfo.cs
+C:\Users\Oksana\Desktop\lab_3_State_Cache\lab_3_State_Cache\obj\Debug\netcoreapp2.0\lab_3_State_Cache.dll
+C:\Users\Oksana\Desktop\lab_3_State_Cache\lab_3_State_Cache\obj\Debug\netcoreapp2.0\lab_3_State_Cache.pdb
