@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Aircrafts_Html</title>
+
+    <environment>
+        <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="css/site.css" />
+        <link rel="stylesheet" href="css/MyStyle.css" />
+    </environment>
+    <environment>
+        <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap-theme.min.css" />
+        <link rel="stylesheet" href="css/site.min.css" />
+    </environment>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">lab_2_ASP.NET</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/Home/Tickets">Tickets</a></li>
+                    <li><a href="/Home/Flights">Flights</a></li>
+                    <li><a href="/Home/Aircrafts">Aircrafts</a></li>
+                    <li><a href="Aircrafts_Html.html">Aircraft_Html</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container body-content">
+        <h2>Aircrafts</h2>
+        <form method="post" action="/Home/Aircrafts">
+            <p>
+                <label>Марка</label>
+                <br />
+                <select id="mark">
+                    <option>Airbus-A310</option>
+                    <option>Airbus-A380</option>
+                    <option>Boeing-737</option>
+                    <option>Boeing-777</option>
+                    <option>ИЛ-62</option>
+                    <option>ТУ-154</option>
+                    <option>Adam A500 Adamjet</option>
+                    <option>Aerospatiale N262</option>
+                    <option>Spike S-512</option>
+                    <option>Aero Boero AB-95</option>
+                </select>
+            </p>
+            <p>
+                <label>Вместимость</label>
+                <br />
+                <input type="text" id="capasity" />
+            </p>
+            <p>
+                <label>Грузоподъемность</label>
+                <br />
+                <input type="text" id="carrying" />
+            </p>
+            <p>
+                <button>Отправить</button>
+            </p>
+            <br />
+            <table class="table">
+                <thead>
+                    <tr class="header">
+                        <td>Марка</td>
+                        <td>Вместимость</td>
+                        <td>Грузоподъемность</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Boeing-737</td>
+                        <td>355</td>
+                        <td>467,01</td>
+                    </tr>
+                    <tr>
+                        <td>Aerospatiale N262</td>
+                        <td>628</td>
+                        <td>432,78</td>
+                    </tr>
+                    <tr>
+                        <td>Boeing-777</td>
+                        <td>771</td>
+                        <td>101,26</td>
+                    </tr>
+                    <tr>
+                        <td>Adam A500 Adamjet</td>
+                        <td>314</td>
+                        <td>248,02</td>
+                    </tr>
+                    <tr>
+                        <td>Boeing-777</td>
+                        <td>794</td>
+                        <td>682,12</td>
+                    </tr>
+                    <tr>
+                        <td>Adam A500 Adamjet</td>
+                        <td>441</td>
+                        <td>615,34</td>
+                    </tr>
+                    <tr>
+                        <td>Aerospatiale N262</td>
+                        <td>650</td>
+                        <td>949,77</td>
+                    </tr>
+                    <tr>
+                        <td>Airbus-A310</td>
+                        <td>380</td>
+                        <td>381,97</td>
+                    </tr>
+                    <tr>
+                        <td>Aerospatiale N262</td>
+                        <td>384</td>
+                        <td>793,78</td>
+                    </tr>
+                    <tr>
+                        <td>Boeing-777</td>
+                        <td>711</td>
+                        <td>886,46</td>
+                    </tr>
+                </tbody>
+            </table>
+            <img src="images/egypt03801.jpg">
+        </form>
+        <hr />
+        <footer>
+            <p>&copy; 2018 - lab_2_ASP.NET</p>
+        </footer>
+    </div>
+
+    <environment>
+        <script src="lib/jquery/dist/jquery.js"></script>
+        <script src="lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="js/site.js"></script>
+        <script src="js/myScript.js"></script>
+    </environment>
+    <environment>
+        <script src="lib/jquery/dist/jquery.min.js"></script>
+        <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="js/site.min.js"></script>
+    </environment>
+</body>
+</html>

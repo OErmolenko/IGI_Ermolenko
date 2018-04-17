@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewData["Title"] = "Flights";
+}
+
+<h2>Flights</h2>
+@using (Html.BeginForm("Flights", "Home", FormMethod.Post))
+{
+    <p>
+        <label>Дата</label>
+        <br />
+        @Html.TextBox("Date")
+    </p>
+    <p>
+        <label>Место отбытия</label>
+        <br />
+        @Html.DropDownList("PlaceDeparture", new SelectList(ViewBag.PlaceDeparture))
+    </p>
+    <p>
+        <label>Место прибытия</label>
+        <br />
+        @Html.DropDownList("PlaceArrival", new SelectList(ViewBag.PlaceDeparture))
+    </p>
+    <p>
+        <button>Отправить</button>
+    </p>
+    <br />
+    <table class="table">
+        <tr class="header">
+            <td>Дата</td>
+            <td>Место отбытия</td>
+            <td>Место прибытия</td>
+            <td>Время полета</td>
+        </tr>
+        @foreach (Flight item in ViewBag.ListFlight)
+        {
+            <tr>
+                <td>@item.Date</td>
+                <td>@item.PlaceDeparture</td>
+                <td>@item.PlaceArrival</td>
+                <td>@item.FlightTime</td>
+            </tr>
+        }
+    </table>
+    <img src="~/images/egypt03801.jpg">
+}

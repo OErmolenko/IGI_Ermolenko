@@ -1,0 +1,11 @@
+E:\Oksana\univer\2 semestr\IGI\lab_2_ASP.NET\lab_2_ASP.NET\bin\Debug\netcoreapp2.0\lab_2_ASP.NET.deps.json
+E:\Oksana\univer\2 semestr\IGI\lab_2_ASP.NET\lab_2_ASP.NET\bin\Debug\netcoreapp2.0\lab_2_ASP.NET.runtimeconfig.json
+E:\Oksana\univer\2 semestr\IGI\lab_2_ASP.NET\lab_2_ASP.NET\bin\Debug\netcoreapp2.0\lab_2_ASP.NET.runtimeconfig.dev.json
+E:\Oksana\univer\2 semestr\IGI\lab_2_ASP.NET\lab_2_ASP.NET\bin\Debug\netcoreapp2.0\lab_2_ASP.NET.dll
+E:\Oksana\univer\2 semestr\IGI\lab_2_ASP.NET\lab_2_ASP.NET\bin\Debug\netcoreapp2.0\lab_2_ASP.NET.pdb
+E:\Oksana\univer\2 semestr\IGI\lab_2_ASP.NET\lab_2_ASP.NET\obj\Debug\netcoreapp2.0\lab_2_ASP.NET.csprojResolveAssemblyReference.cache
+E:\Oksana\univer\2 semestr\IGI\lab_2_ASP.NET\lab_2_ASP.NET\obj\Debug\netcoreapp2.0\lab_2_ASP.NET.csproj.CoreCompileInputs.cache
+E:\Oksana\univer\2 semestr\IGI\lab_2_ASP.NET\lab_2_ASP.NET\obj\Debug\netcoreapp2.0\lab_2_ASP.NET.AssemblyInfoInputs.cache
+E:\Oksana\univer\2 semestr\IGI\lab_2_ASP.NET\lab_2_ASP.NET\obj\Debug\netcoreapp2.0\lab_2_ASP.NET.AssemblyInfo.cs
+E:\Oksana\univer\2 semestr\IGI\lab_2_ASP.NET\lab_2_ASP.NET\obj\Debug\netcoreapp2.0\lab_2_ASP.NET.dll
+E:\Oksana\univer\2 semestr\IGI\lab_2_ASP.NET\lab_2_ASP.NET\obj\Debug\netcoreapp2.0\lab_2_ASP.NET.pdb

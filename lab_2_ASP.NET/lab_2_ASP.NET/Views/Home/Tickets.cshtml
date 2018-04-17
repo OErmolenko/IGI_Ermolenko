@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewData["Title"] = "Tickets";
+}
+
+<h2>Tickets</h2>
+@using (Html.BeginForm("Tickets", "Home", FormMethod.Post))
+{
+    <p>
+        <label>ФИО</label>
+        <br />
+        @Html.TextBox("FullName")
+    </p>
+    <p>
+        <label>Паспортные данные</label>
+        <br />
+        @Html.TextBox("PassportData")
+    </p>
+    <p>
+        <label>Место</label>
+        <br />
+        @Html.DropDownList("NumberPlace", new SelectList(ViewBag.NumberPlace))
+    </p>
+    <p>
+        <button>Отправить</button>
+    </p>
+    <br />
+    <table class="table">
+        <tr class="header">
+            <td>ФИО</td>
+            <td>Паспортные данные</td>
+            <td>Место</td>
+            <td>Цена, р</td>
+        </tr>
+        @foreach (Ticket item in ViewBag.ListTicket)
+        {
+            <tr>
+                <td>@item.FullName</td>
+                <td>@item.PassportData</td>
+                <td>@item.NumberPlace</td>
+                <td>@item.Price</td>
+            </tr>
+        }
+    </table>
+    <img src="~/images/egypt03801.jpg">
+}
+
