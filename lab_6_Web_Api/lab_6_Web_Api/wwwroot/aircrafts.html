@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Aircrafts</title>
+    <link href="lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <script src="lib/jquery/dist/jquery.js"></script>
+    <link href="lib/jquery-ui/themes/base/jquery-ui.min.css" rel="stylesheet" />
+    <script src="lib/jquery-ui/jquery-ui.js"></script>
+    <script src="lib/jquery-ui/ui/i18n/datepicker-ru.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Список самолетов</h2>
+        <form name="aircraftForm">
+            <input type="hidden" name="aircraftId" value="0" />
+            <div class="form-group">
+                <label for="nameType">Тип:</label>
+                <select id="typeId" name="typeId"></select>
+            </div>
+            <div class="form-group">
+                <label for="mark">Марка:</label>
+                <input class="form-control" name="mark" />
+            </div>
+            <div class="form-group">
+                <label for="capasity">Вместимость:</label>
+                <input class="form-control" name="capasity" />
+            </div>
+            <div class="form-group">
+                <label for="carrying">Грузоподъемность:</label>
+                <input class="form-control" name="carrying" />
+            </div>
+            <div class="panel-body">
+                <button type="submit" class="btn btn-sm btn-primary">Сохранить</button>
+                <a id="reset" class="btn btn-sm btn-primary">Сбросить</a>
+            </div>
+        </form>
+
+        <table class="table table-condensed table-striped table-bordered">
+            <thead><tr><th>Код</th><th>Тип</th><th>Марка</th><th>Вместимость</th><th>Грузоподъемность</th><th></th></tr></thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <script>
+        // Получение всех самолетов
+        function Getaircrafts() {
+            $.ajax({
+                url: '/api/aircrafts',
+                type: 'GET',
+                contentType: "application/json",
+                success: function (aircrafts) {
+                    var rows = "";
+                    $.each(aircrafts, function (index, aircraft) {
+                        // добавляем полученные элементы в таблицу
+                        rows += row(aircraft);
+                    })
+                    $("table tbody").append(rows);
+                }
+            });
+        }
+
+        // Получение одного самолета
+        function Getaircraft(id) {
+            $.ajax({
+                url: '/api/aircrafts/' + id,
+                type: 'GET',
+                contentType: "application/json",
+                success: function (aircraft) {
+                    var form = document.forms["aircraftForm"];
+                    form.elements["aircraftId"].value = aircraft.aircraftId;
+                    form.elements["typeId"].selectedIndex = aircraft.typeId;
+                    form.elements["mark"].value = aircraft.mark;
+                    form.elements["capasity"].value = aircraft.capasity;
+                    form.elements["carrying"].value = aircraft.carrying;
+                }
+            });
+        }
+
+        // Добавление самолета
+        function Createaircraft(typeId, mark, capasity, carrying) {
+            $.ajax({
+                url: "api/aircrafts",
+                contentType: "application/json",
+                method: "POST",
+                data: JSON.stringify({
+                    typeId: typeId,
+                    mark: mark,
+                    capasity: capasity,
+                    carrying: carrying
+                }),
+                success: function (aircraft) {
+                    reset();
+                    var form = document.forms["aircraftForm"];
+                    aircraft.nameType = form.elements["typeId"].options[typeId].text;
+                    $("table tbody").append(row(aircraft));
+                }
+            })
+        }
+
+        // Изменение самолета
+        function Editaircraft(aircraftID, typeId, mark, capasity, carrying) {
+            $.ajax({
+                url: "api/aircrafts",
+                contentType: "application/json",
+                method: "PUT",
+                data: JSON.stringify({
+                    aircraftID: aircraftID,
+                    typeId: typeId,
+                    mark: mark,
+                    capasity: capasity,
+                    carrying: carrying
+                }),
+                success: function (aircraft) {
+                    reset();
+                    var form = document.forms["aircraftForm"];
+                    aircraft.nameType = form.elements["typeId"].options[typeId].text;
+                    $("tr[data-rowid='" + aircraft.aircraftId + "']").replaceWith(row(aircraft));
+                }
+            })
+        }
+
+        // сброс формы
+        function reset() {
+            var form = document.forms["aircraftForm"];
+            form.reset();
+            form.elements["aircraftId"].value = 0;
+        }
+
+        // Удаление самолета
+        function Deleteaircraft(id) {
+            $.ajax({
+                url: "api/aircrafts/" + id,
+                contentType: "application/json",
+                method: "DELETE",
+                success: function (aircraft) {
+                    $("tr[data-rowid='" + aircraft.aircraftnId + "']").remove();
+                }
+            })
+        }
+
+        // создание строки для таблицы
+        var row = function (aircraft) {
+            return "<tr data-rowid='" + aircraft.aircraftId + "'><td>" + aircraft.aircraftId + "</td>" +
+                "<td>" + aircraft.nameType + "</td>" +
+                "<td>" + aircraft.mark + "</td>" +
+                "<td>" + aircraft.capasity + "</td>" +
+                "<td>" + aircraft.carrying + "</td>" +
+                "<td><a class='editLink' data-id='" + aircraft.aircraftId + "'>Изменить</a> | " +
+                "<a class='removeLink' data-id='" + aircraft.aircraftId + "'>Удалить</a></td></tr>";
+        }
+
+        // Получение списка типов
+        function GetType() {
+            var listItems = "";
+            $.ajax({
+                url: '/api/aircrafts/types',
+                type: 'GET',
+                contentType: "application/json",
+                success: function (types) {
+                    listItems = listItems + "<option value=0 selected>(выбор)</option>";
+                    $.each(types, function (index, type) {
+                        listItems = listItems + "<option value='" + type.typeId + "'>" + type.nameType + "</option>";
+                    });
+                    $("#typeId").html(listItems);
+                }
+            });
+        }
+
+        // сброс значений формы
+        $("#reset").click(function (e) {
+            e.preventDefault();
+            reset();
+        })
+
+        // отправка формы
+        $("form").submit(function (e) {
+
+            e.preventDefault();
+            var aircraftId = this.elements["aircraftId"].value;
+            var typeId = this.elements["typeId"].selectedIndex;
+            var mark = this.elements["mark"].value;
+            var capasity = this.elements["capasity"].value;
+            var carrying = this.elements["carrying"].value;
+            if (aircraftId == 0)
+                Createaircraft(typeId, mark, capasity, carrying);
+            else
+                Editaircraft(aircraftId, typeId, mark, capasity, carrying);
+        });
+
+        // нажатие на ссылку Изменить
+        $("body").on("click", ".editLink", function () {
+            var id = $(this).data("id");
+            Getaircraft(id);
+        })
+        // нажатие на ссылку Удалить
+        $("body").on("click", ".removeLink", function () {
+            var id = $(this).data("id");
+            Deleteaircraft(id);
+        })
+        // загрузка данных для таблицы и ее формирование
+        Getaircrafts();
+        // загрузка данных для списка типа и его формирование
+        GetType();
+    </script>
+</body>
+</html>
