@@ -1,0 +1,33 @@
+E:\Oksana\univer\2 semestr\IGI\lab_4_Controllers_Filter\lab_4_Controllers_Filter\bin\Debug\netcoreapp2.0\lab_4_Controllers_Filter.deps.json
+E:\Oksana\univer\2 semestr\IGI\lab_4_Controllers_Filter\lab_4_Controllers_Filter\bin\Debug\netcoreapp2.0\lab_4_Controllers_Filter.runtimeconfig.json
+E:\Oksana\univer\2 semestr\IGI\lab_4_Controllers_Filter\lab_4_Controllers_Filter\bin\Debug\netcoreapp2.0\lab_4_Controllers_Filter.runtimeconfig.dev.json
+E:\Oksana\univer\2 semestr\IGI\lab_4_Controllers_Filter\lab_4_Controllers_Filter\bin\Debug\netcoreapp2.0\lab_4_Controllers_Filter.dll
+E:\Oksana\univer\2 semestr\IGI\lab_4_Controllers_Filter\lab_4_Controllers_Filter\obj\Debug\netcoreapp2.0\lab_4_Controllers_Filter.csprojResolveAssemblyReference.cache
+E:\Oksana\univer\2 semestr\IGI\lab_4_Controllers_Filter\lab_4_Controllers_Filter\obj\Debug\netcoreapp2.0\lab_4_Controllers_Filter.csproj.CoreCompileInputs.cache
+E:\Oksana\univer\2 semestr\IGI\lab_4_Controllers_Filter\lab_4_Controllers_Filter\obj\Debug\netcoreapp2.0\lab_4_Controllers_Filter.AssemblyInfoInputs.cache
+E:\Oksana\univer\2 semestr\IGI\lab_4_Controllers_Filter\lab_4_Controllers_Filter\obj\Debug\netcoreapp2.0\lab_4_Controllers_Filter.AssemblyInfo.cs
+E:\Oksana\univer\2 semestr\IGI\lab_4_Controllers_Filter\lab_4_Controllers_Filter\bin\Debug\netcoreapp2.0\lab_4_Controllers_Filter.pdb
+E:\Oksana\univer\2 semestr\IGI\lab_4_Controllers_Filter\lab_4_Controllers_Filter\obj\Debug\netcoreapp2.0\lab_4_Controllers_Filter.dll
+E:\Oksana\univer\2 semestr\IGI\lab_4_Controllers_Filter\lab_4_Controllers_Filter\obj\Debug\netcoreapp2.0\lab_4_Controllers_Filter.pdb
+E:\Oksana\univer\2 semestr\IGI - 42,86%\lab_4_Controllers_Filter\lab_4_Controllers_Filter\bin\Debug\netcoreapp2.0\lab_4_Controllers_Filter.deps.json
+E:\Oksana\univer\2 semestr\IGI - 42,86%\lab_4_Controllers_Filter\lab_4_Controllers_Filter\bin\Debug\netcoreapp2.0\lab_4_Controllers_Filter.runtimeconfig.json
+E:\Oksana\univer\2 semestr\IGI - 42,86%\lab_4_Controllers_Filter\lab_4_Controllers_Filter\bin\Debug\netcoreapp2.0\lab_4_Controllers_Filter.runtimeconfig.dev.json
+E:\Oksana\univer\2 semestr\IGI - 42,86%\lab_4_Controllers_Filter\lab_4_Controllers_Filter\bin\Debug\netcoreapp2.0\lab_4_Controllers_Filter.dll
+E:\Oksana\univer\2 semestr\IGI - 42,86%\lab_4_Controllers_Filter\lab_4_Controllers_Filter\bin\Debug\netcoreapp2.0\lab_4_Controllers_Filter.pdb
+E:\Oksana\univer\2 semestr\IGI - 42,86%\lab_4_Controllers_Filter\lab_4_Controllers_Filter\obj\Debug\netcoreapp2.0\lab_4_Controllers_Filter.csprojResolveAssemblyReference.cache
+E:\Oksana\univer\2 semestr\IGI - 42,86%\lab_4_Controllers_Filter\lab_4_Controllers_Filter\obj\Debug\netcoreapp2.0\lab_4_Controllers_Filter.csproj.CoreCompileInputs.cache
+E:\Oksana\univer\2 semestr\IGI - 42,86%\lab_4_Controllers_Filter\lab_4_Controllers_Filter\obj\Debug\netcoreapp2.0\lab_4_Controllers_Filter.AssemblyInfoInputs.cache
+E:\Oksana\univer\2 semestr\IGI - 42,86%\lab_4_Controllers_Filter\lab_4_Controllers_Filter\obj\Debug\netcoreapp2.0\lab_4_Controllers_Filter.AssemblyInfo.cs
+E:\Oksana\univer\2 semestr\IGI - 42,86%\lab_4_Controllers_Filter\lab_4_Controllers_Filter\obj\Debug\netcoreapp2.0\lab_4_Controllers_Filter.dll
+E:\Oksana\univer\2 semestr\IGI - 42,86%\lab_4_Controllers_Filter\lab_4_Controllers_Filter\obj\Debug\netcoreapp2.0\lab_4_Controllers_Filter.pdb
+E:\Oksana\univer\2 semestr\IGI - 66,66%\lab_4_Controllers_Filter\lab_4_Controllers_Filter\bin\Debug\netcoreapp2.0\lab_4_Controllers_Filter.deps.json
+E:\Oksana\univer\2 semestr\IGI - 66,66%\lab_4_Controllers_Filter\lab_4_Controllers_Filter\bin\Debug\netcoreapp2.0\lab_4_Controllers_Filter.runtimeconfig.json
+E:\Oksana\univer\2 semestr\IGI - 66,66%\lab_4_Controllers_Filter\lab_4_Controllers_Filter\bin\Debug\netcoreapp2.0\lab_4_Controllers_Filter.runtimeconfig.dev.json
+E:\Oksana\univer\2 semestr\IGI - 66,66%\lab_4_Controllers_Filter\lab_4_Controllers_Filter\bin\Debug\netcoreapp2.0\lab_4_Controllers_Filter.dll
+E:\Oksana\univer\2 semestr\IGI - 66,66%\lab_4_Controllers_Filter\lab_4_Controllers_Filter\bin\Debug\netcoreapp2.0\lab_4_Controllers_Filter.pdb
+E:\Oksana\univer\2 semestr\IGI - 66,66%\lab_4_Controllers_Filter\lab_4_Controllers_Filter\obj\Debug\netcoreapp2.0\lab_4_Controllers_Filter.csprojResolveAssemblyReference.cache
+E:\Oksana\univer\2 semestr\IGI - 66,66%\lab_4_Controllers_Filter\lab_4_Controllers_Filter\obj\Debug\netcoreapp2.0\lab_4_Controllers_Filter.csproj.CoreCompileInputs.cache
+E:\Oksana\univer\2 semestr\IGI - 66,66%\lab_4_Controllers_Filter\lab_4_Controllers_Filter\obj\Debug\netcoreapp2.0\lab_4_Controllers_Filter.AssemblyInfoInputs.cache
+E:\Oksana\univer\2 semestr\IGI - 66,66%\lab_4_Controllers_Filter\lab_4_Controllers_Filter\obj\Debug\netcoreapp2.0\lab_4_Controllers_Filter.AssemblyInfo.cs
+E:\Oksana\univer\2 semestr\IGI - 66,66%\lab_4_Controllers_Filter\lab_4_Controllers_Filter\obj\Debug\netcoreapp2.0\lab_4_Controllers_Filter.dll
+E:\Oksana\univer\2 semestr\IGI - 66,66%\lab_4_Controllers_Filter\lab_4_Controllers_Filter\obj\Debug\netcoreapp2.0\lab_4_Controllers_Filter.pdb

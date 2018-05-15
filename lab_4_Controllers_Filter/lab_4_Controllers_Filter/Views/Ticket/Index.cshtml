@@ -1,0 +1,100 @@
+﻿@model lab_4_Controllers_Filter.ViewModels.TicketIndexViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Билеты</h2>
+@using (Html.BeginForm("Index", "Ticket", FormMethod.Post))
+{
+    <div class="form-inline">
+        <p>
+            <label class="control-label">ФИО</label>
+            <br />
+            @Html.TextBox("fullName", Model.TicketFilterViewModel.SelectFullName, htmlAttributes: new { @class = "form-control" })
+        </p>
+        <p>
+            <label class="control-label">Паспортные данные</label>
+            <br />
+            @Html.TextBox("passportData", Model.TicketFilterViewModel.SelectPassportData, htmlAttributes: new { @class = "form-control" })
+        </p>
+        <p>
+            <button>Поиск</button>
+        </p>
+        <br />
+    </div>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <a asp-action="Index"
+                   asp-route-sortOrder="@(Model.TicketSortViewModel.FullNameSort)"
+                   asp-route-fullName="@(Model.TicketFilterViewModel.SelectFullName)"
+                   asp-route-passportData="@(Model.TicketFilterViewModel.SelectPassportData)">ФИО</a>
+            </th>
+            <th>
+                <a asp-action="Index"
+                   asp-route-sortOrder="@(Model.TicketSortViewModel.PassportDataSort)"
+                   asp-route-fullName="@(Model.TicketFilterViewModel.SelectFullName)"
+                   asp-route-passportData="@(Model.TicketFilterViewModel.SelectPassportData)">Паспортные данные</a>
+            </th>
+            <th>
+                <a asp-action="Index"
+                   asp-route-sortOrder="@(Model.TicketSortViewModel.NumberPlaceSort)"
+                   asp-route-fullName="@(Model.TicketFilterViewModel.SelectFullName)"
+                   asp-route-passportData="@(Model.TicketFilterViewModel.SelectPassportData)">Место</a>
+            </th>
+            <th>
+                <a asp-action="Index"
+                   asp-route-sortOrder="@(Model.TicketSortViewModel.PriceSort)"
+                   asp-route-fullName="@(Model.TicketFilterViewModel.SelectFullName)"
+                   asp-route-passportData="@(Model.TicketFilterViewModel.SelectPassportData)">Цена</a>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (Ticket ticket in Model.Ticket) {
+        <tr>
+            <td>
+                @ticket.FullName
+            </td>
+            <td>
+                @ticket.PassportData
+            </td>
+            <td>
+                @ticket.NumberPlace
+            </td>
+            <td>
+                @ticket.Price
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+@if (Model.PageViewModel.HasPreviousPage)
+{
+    <a asp-action="Index"
+       asp-route-page="@(Model.PageViewModel.PageNumber - 1)"
+       asp-route-sortOrder="@(Model.TicketSortViewModel.PriceSort)"
+       asp-route-fullName="@(Model.TicketFilterViewModel.SelectFullName)"
+       asp-route-passportData="@(Model.TicketFilterViewModel.SelectPassportData)">
+        <i class="glyphicon glyphicon-chevron-left"></i>
+        Назад
+    </a>
+}
+
+@if (Model.PageViewModel.HasNextPage)
+{
+    <a asp-action="Index"
+       asp-route-page="@(Model.PageViewModel.PageNumber + 1)"
+       asp-route-sortOrder="@(Model.TicketSortViewModel.PriceSort)"
+       asp-route-fullName="@(Model.TicketFilterViewModel.SelectFullName)"
+       asp-route-passportData="@(Model.TicketFilterViewModel.SelectPassportData)"
+       class="btn btn-default btn">
+        Вперед
+        <i class="glyphicon glyphicon-chevron-right"></i>
+    </a>
+}

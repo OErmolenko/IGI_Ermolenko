@@ -1,0 +1,101 @@
+﻿@model lab_4_Controllers_Filter.ViewModels.AircraftIndexViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Самолеты</h2>
+@using (Html.BeginForm("Index", "Aircraft", FormMethod.Post))
+{
+    <div class="form-inline">
+        <p>
+            <label class="control-label">Марка</label>
+            <br />
+            @Html.DropDownList("mark", Model.AirportFilterViewModel.ListMark as SelectList, htmlAttributes: new { @class = "form-control" })
+        </p>
+        <p>
+            <label class="control-label">Вместимость</label>
+            <br />
+            @Html.TextBox("capasity", Model.AirportFilterViewModel.SelectCapasity, htmlAttributes: new { @class = "form-control" })
+        </p>
+        <p>
+            <label class="control-label">Грузоподъемность</label>
+            <br />
+            @Html.TextBox("carrying", Model.AirportFilterViewModel.SelectCarrying, htmlAttributes: new { @class = "form-control" })
+        </p>
+        <p>
+            <button>Поиск</button>
+        </p>
+        <br />
+    </div>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    <a asp-action="Index"
+                       asp-route-sortOrder="@(Model.AircraftSortViewModel.MarkSort)"
+                       asp-route-mark="@(Model.AirportFilterViewModel.SelectMark)"
+                       asp-route-capasity="@(Model.AirportFilterViewModel.SelectCapasity)"
+                       asp-route-carrying="@(Model.AirportFilterViewModel.SelectCarrying)">Марка</a>
+                </th>
+                <th>
+                    <a asp-action="Index"
+                       asp-route-sortOrder="@(Model.AircraftSortViewModel.CapasitySort)"
+                       asp-route-mark="@(Model.AirportFilterViewModel.SelectMark)"
+                       asp-route-capasity="@(Model.AirportFilterViewModel.SelectCapasity)"
+                       asp-route-carrying="@(Model.AirportFilterViewModel.SelectCarrying)">Вместимость</a>
+                </th>
+                <th>
+                    <a asp-action="Index"
+                       asp-route-sortOrder="@(Model.AircraftSortViewModel.CarryingSort)"
+                       asp-route-mark="@(Model.AirportFilterViewModel.SelectMark)"
+                       asp-route-capasity="@(Model.AirportFilterViewModel.SelectCapasity)"
+                       asp-route-carrying="@(Model.AirportFilterViewModel.SelectCarrying)">Грузоподъемность</a>
+                </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (Aircraft air in Model.Aircraft) {
+        <tr>
+            <td>
+                @air.Mark
+            </td>
+            <td>
+                @air.Capasity
+            </td>
+            <td>
+                @air.Carrying
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+@if (Model.PageViewModel.HasPreviousPage)
+{
+    <a asp-action="Index"
+       asp-route-page="@(Model.PageViewModel.PageNumber - 1)"
+       asp-route-sortOrder="@(Model.AircraftSortViewModel.Current)"
+       asp-route-mark="@(Model.AirportFilterViewModel.SelectMark)"
+       asp-route-capasity="@(Model.AirportFilterViewModel.SelectCapasity)"
+       asp-route-carrying="@(Model.AirportFilterViewModel.SelectCarrying)">
+            <i class="glyphicon glyphicon-chevron-left"></i>
+            Назад
+    </a>
+}
+
+@if (Model.PageViewModel.HasNextPage)
+{
+    <a asp-action="Index"
+       asp-route-page="@(Model.PageViewModel.PageNumber + 1)"
+       asp-route-sortOrder="@(Model.AircraftSortViewModel.Current)"
+       asp-route-mark="@(Model.AirportFilterViewModel.SelectMark)"
+       asp-route-capasity="@(Model.AirportFilterViewModel.SelectCapasity)"
+       asp-route-carrying="@(Model.AirportFilterViewModel.SelectCarrying)"
+       class="btn btn-default btn">
+            Вперед
+            <i class="glyphicon glyphicon-chevron-right"></i>
+    </a>
+}
