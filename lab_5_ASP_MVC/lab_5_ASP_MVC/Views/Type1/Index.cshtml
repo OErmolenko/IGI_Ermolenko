@@ -1,0 +1,92 @@
+﻿@model lab_5_ASP_MVC.ViewModels.TypeIndexViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm("Index", "Type1", FormMethod.Post))
+{
+    <div class="form-inline">
+        <p>
+            <label class="control-label">Вместимость</label>
+            <br />
+            @Html.TextBox("nameType", Model.TypeFilterViewModel.SelectNameType, htmlAttributes: new { @class = "form-control" })
+        </p>
+        <p>
+            <button>Поиск</button>
+        </p>
+        <br />
+    </div>
+}
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <a asp-action="Index"
+                   asp-route-sortOrder="@(Model.TypeSortViewModel.NameType)"
+                   asp-route-nameType="@(Model.TypeFilterViewModel.SelectNameType)">Наименование типа</a>
+            </th>
+            <th>
+                <a asp-action="Index"
+                   asp-route-sortOrder="@(Model.TypeSortViewModel.Appointment)"
+                   asp-route-nameType="@(Model.TypeFilterViewModel.SelectNameType)">Назначение</a>
+            </th>
+            <th>
+                <a asp-action="Index"
+                   asp-route-sortOrder="@(Model.TypeSortViewModel.Restrictions)"
+                   asp-route-nameType="@(Model.TypeFilterViewModel.SelectNameType)">Ограничение</a>
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var type in Model.Types)
+        {
+            <tr>
+                <td>
+                    @type.NameType
+                </td>
+                <td>
+                    @type.Appointment
+                </td>
+                <td>
+                    @type.Restrictions
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@type.TypeId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@type.TypeId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@type.TypeId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@if (Model.PageViewModel.HasPreviousPage)
+{
+    <a asp-action="Index"
+       asp-route-page="@(Model.PageViewModel.PageNumber - 1)"
+       asp-route-sortOrder="@(Model.TypeSortViewModel.Current)"
+       asp-route-nameType="@(Model.TypeFilterViewModel.SelectNameType)">
+        <i class="glyphicon glyphicon-chevron-left"></i>
+        Назад
+    </a>
+}
+
+@if (Model.PageViewModel.HasNextPage)
+{
+    <a asp-action="Index"
+       asp-route-page="@(Model.PageViewModel.PageNumber + 1)"
+       asp-route-sortOrder="@(Model.TypeSortViewModel.Current)"
+       asp-route-nameType="@(Model.TypeFilterViewModel.SelectNameType)"
+       class="btn btn-default btn">
+        Вперед
+        <i class="glyphicon glyphicon-chevron-right"></i>
+    </a>
+}

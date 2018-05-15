@@ -1,0 +1,39 @@
+﻿@model lab_5_ASP_MVC.Models.Type
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Type</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NameType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NameType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Appointment)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Appointment)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Restrictions)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Restrictions)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="TypeId" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
